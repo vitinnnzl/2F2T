@@ -1,1 +1,2 @@
-# 2F2T
+# segundo trimestre - mobile-first
+Vitor Baffini Galerani - N°36
