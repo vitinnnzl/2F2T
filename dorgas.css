@@ -1,0 +1,28 @@
+@import 'menu.css';
+.conteudo{
+    width: 100%;
+}
+.rodape{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(104, 16, 219);
+}
+.img-mobile{
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .menu{
+        height: 100px;
+        background-color: blueviolet;
+    }
+    .conteudo-home{
+        display: flex;
+        
+    }
+}
+@media screen and (min-width: 1280px){
+    .menu{
+        height: 150px;
+        background-color: black;
+   }
+}

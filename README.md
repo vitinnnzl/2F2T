@@ -1,2 +1,3 @@
-# segundo trimestre - mobile-first
-Vitor Baffini Galerani - N°36
+# Segundo trimestre - Mobile-first
+
+Vitor Baffini G. N°36

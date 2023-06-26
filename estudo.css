@@ -1,18 +1,50 @@
 * {
-
-   margin: 0%;
-   padding: 0%;  
+    margin: 0;
+    padding: 0;
 }
-body{ 
-   background-color: blueviolet;
+body {
+    background-color: black;
 }
 .item {
- width: 100px;
- height: 100px;
-background-color:black ;
-color: black;
-margin: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+    color: red;
+    margin: 10px;
 }
 .conteudo {
-    display: flex;
+   display: grid;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+.barra{
+    background-color: yellow;
+    height: 20vh;
+    grid-area: barra ;
+}
+
+.principal{
+    background-color: red;
+    height: 60vh;
+    grid-area: principal ;
+}
+
+.lado{
+    background-color:blue;
+    height: 60vh;
+    grid-area: lado ;
+}
+
+.rodape{
+    background-color:rgb(247, 0, 255);
+    height: 20vh;
+    grid-area: rodape ;
+
+}
+.meu-site{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: 
+              "barra barra"
+              "lado principal"
+              "rodape rodape" ;
 }
