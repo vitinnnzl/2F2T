@@ -141,6 +141,7 @@ ul{
 
     .hamb{
         display: none;
+        float: right;
     }
 
     #logo {

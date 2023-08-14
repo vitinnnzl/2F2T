@@ -1,3 +1,3 @@
 # Segundo trimestre - Mobile-first
 
-Vitor Baffini G. N°36
+Vitor Baffini N°36

@@ -1,28 +1,238 @@
-@import 'menu.css';
-.conteudo{
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+:root{
+    --white: #f9f9f9;
+    --black: #1f1f21;
+    --gray: #877979;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/* Header */
+.header{
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
     width: 100%;
 }
-.rodape{
+/* Logo */
+.logo{
+    display: inline-block;
+    color: var(--white);
+}
+
+#logo {
+    width: 10vh;
+    margin: 5px;
+}
+
+/* Nav menu */
+.nav{
     width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+.menu a:hover{
+    background-color: var(--gray);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 35px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+.conteudo-droga {
+  width: 90vw;
+  padding: 10px;
+}
+#img-def {
+    display: none;
+}
+.descricao{
+    width: 100vw;
+}
+.img-definicao{
+    width: 100vw;
+}
+.rodape {
+    width: 100vw;
     text-align: center;
-    background-color: rgb(104, 16, 219);
+    background-color: #877979;
+    color: white;
 }
-.img-mobile{
-    width: 100%;
+
+div[class^="item-"]{
+    background-color: rgb(108, 163, 108);
+    height: 200px;
+    margin: 5px;
+    grid-area: "info";
 }
-@media screen and (min-width: 768px) {
-    .menu{
-        height: 100px;
-        background-color: blueviolet;
+.info{
+    display: grid;
+    width: 100vw;
+
+}
+
+@media (min-width: 820px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
     }
-    .conteudo-home{
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+
+    }
+
+    .hamb{
+        display: none;
+    }
+
+    #logo {
+        width: 15vh;
+        margin: 5px;
+    }
+    .conteudo-droga {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+         "geral geral";
+    }
+    .definicao{
         display: flex;
-        
+        width: 100vw;
     }
+    .descricao {
+        height: 100%;
+        padding: 50px;
+        width: 70vw;
+    }
+    .img-definicao{
+        display: block;
+        text-align: center;
+        height: 30vw;
+        width: 30vw;
+    }
+    #img-def{
+       display: block;
+       width: 50%;
+    }
+    .info{
+       grid-template-columns: 50% 50%;
+       grid-area: "item" "item";
+    }
+
 }
-@media screen and (min-width: 1280px){
-    .menu{
-        height: 150px;
-        background-color: black;
-   }
+@media (min-width: 1024px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+
+    }
+
+    .hamb{
+        display: none;
+    }
+
+    #logo {
+        width: 15vh;
+        margin: 5px;
+    }
+    .info {
+        grid-template-columns: 33% 34% 33%;
+        grid-template-areas: 
+         "geral geral geral";
+    }
+
 }
